@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
+/*ACESSO JOVEM*/
+body{
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+
+h2{
+    font-family: 'Asap Condensed', sans-serif;
+    margin-bottom: 40px;
+ font-size: 45px !important;
+ background-image: linear-gradient(to bottom, #0F506D,#2A6E90, #006D9D);
+ background-clip: text;
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent;
+ color: black;
+ font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+}
+
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity .5s;
+    transition: filter 500ms; 
+}
+.curso-img{
+
+    transition: filter 500ms !important; 
+}
+figure img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transition: filter .6s !important; /* Ajuste o valor para controlar a velocidade da transição do efeito de desfoque */
+}
+
+
+
+
+figure:hover .curso-img {
+    filter: blur(8px); /* Adicionando o efeito de desfoque na imagem quando o figure está em foco */
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+figure:hover figcaption + .curso-img {
+    filter: blur(8px); /* Desfocar a imagem quando o figcaption está em foco */
+}
+
+.cursos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:40px
+}
+
+
+.cursos img{
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
